@@ -1,0 +1,5 @@
+<meta>
+	<info author="Squishylempn" version="1.0" description="Adds some commands like money and interior ect" />
+	
+	<script src="client.js" type="client" language="javascript" />	
+</meta>
