@@ -69,6 +69,32 @@ addCommandHandler("setmoney", function (cmdName, params) {
 	
 });
 //-----------------------------------------------------------------------------
+addCommandHandler("help", function (cmdName, params) {
+
+
+	
+	message("Lemons Commands : wantedlevel,addmoney,setmoney,removemoney,giveallweapons,loadinterior")
+	return true;
+	
+});
+//-----------------------------------------------------------------------------
+addCommandHandler("wantedlevel", function (cmdName, params) {
+	if (!params || params == "") {
+		message("Syntax: /wantedlevel <star amount> <player target>", syntaxMessageColour);
+		return false;
+	}  
+   	//----------New Var converts string param to int
+
+	let starsamount = parseInt(params);
+	localPlayer.wantedLevel = starsamount;
+	
+	
+    let outputText = `Gave themself ${starsamount} Stars`;
+	outputSandboxMessage(outputText);
+	return true;
+	
+});
+//-----------------------------------------------------------------------------
 addCommandHandler("loadinterior", function (cmdName, params) {
 	if (!params || params == "") {
 		message("Syntax: /loadinterior <building id>", syntaxMessageColour);
